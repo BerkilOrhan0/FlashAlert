@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent">
+
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            app:menu="@menu/appbar_menu"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/img_flashlogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_flashlight"
+        android:layout_below="@id/appbar"
+        android:layout_marginTop="58dp"
+        android:layout_centerHorizontal="true"/>
+
+
+    <TextView
+        android:id="@+id/tv_active"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/turn_on_to_active"
+        android:layout_below="@id/img_flashlogo"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="12dp"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#D5CFCF"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_flash_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/tv_active"
+        android:background="@drawable/shape_relative_bg"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:id="@+id/ic_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_phone"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="14dp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:textStyle="bold"
+            android:id="@+id/tv_flash_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:layout_toEndOf="@id/ic_phone"
+            android:textColor="@color/gntGray"
+            android:text="@string/flas_on_call"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_phone_status"
+            android:layout_below="@id/tv_flash_call"
+            android:layout_toEndOf="@id/ic_phone"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="12dp"
+            android:textSize="22sp"
+            android:textColor="#AAA0A0"
+            android:fontFamily="@font/cousine"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_flash_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/rl_flash_phone"
+        android:background="@drawable/shape_relative_bg"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:id="@+id/ic_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_message"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="14dp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_flash_sms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_on_sms"
+            android:layout_toEndOf="@id/ic_sms"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:textSize="24sp"
+            android:textColor="@color/gntGray"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_phone_status"
+            android:layout_below="@id/tv_flash_sms"
+            android:layout_toEndOf="@id/ic_sms"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="12dp"
+            android:textSize="22sp"
+            android:textColor="#AAA0A0"
+            android:fontFamily="@font/scada"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_flash_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@id/rl_flash_sms"
+        android:background="@drawable/shape_relative_bg"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="12dp">
+
+        <ImageView
+            android:id="@+id/ic_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_notification"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="14dp"
+            android:padding="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_flash_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_on_notification"
+            android:layout_toEndOf="@id/ic_notification"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="18dp"
+            android:textSize="24sp"
+            android:textColor="@color/gntGray"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/flash_phone_status"
+            android:layout_below="@id/tv_flash_notification"
+            android:layout_toEndOf="@id/ic_notification"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="18dp"
+            android:layout_marginStart="12dp"
+            android:textSize="22sp"
+            android:textColor="#AAA0A0"
+            android:fontFamily="@font/scada"/>
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

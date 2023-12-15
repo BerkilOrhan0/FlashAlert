@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_call_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/shape_relative_bg">
+
+        <ImageView
+            android:id="@+id/ic_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_phone" />
+
+
+        <TextView
+            android:id="@+id/status_is_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_toEndOf="@id/ic_phone"
+            android:text="@string/status"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/status_is_on_off"
+            android:text="Off"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/sw_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="12dp"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_speed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/flashlight_speed"
+        android:layout_below="@id/rl_call_status"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"
+        android:textSize="26sp"
+        android:textStyle="bold"/>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginEnd="18dp"
+        android:layout_below="@id/tv_speed"
+        android:background="@drawable/shape_relative_bg"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:id="@+id/tvOnTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="On time"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="12dp"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+
+        <TextView
+            android:id="@+id/tv_ms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="18dp"
+            android:text="ms"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:textColor="#988F8F"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_call_on_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tv_ms"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="8dp"
+            android:text="delay"
+            android:textSize="20sp"
+            android:textColor="#988F8F"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_call_on_delay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_call_on_delay"
+            android:thumb="@drawable/seekbar_thumb"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:max="1500"
+            android:progress="500"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <TextView
+            android:id="@+id/tvOffTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Off time"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="12dp"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_below="@id/seekbar_call_on_delay"/>
+
+
+        <TextView
+            android:id="@+id/tv_off_ms"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="24dp"
+            android:text="ms"
+            android:layout_below="@id/seekbar_call_on_delay"
+            android:layout_marginEnd="12dp"
+            android:textSize="20sp"
+            android:textColor="#988F8F"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tv_off_call_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toStartOf="@id/tv_ms"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="8dp"
+            android:layout_below="@id/seekbar_call_on_delay"
+            android:text="delay"
+            android:textSize="20sp"
+            android:textColor="#988F8F"
+            android:textStyle="bold"/>
+
+
+        <androidx.appcompat.widget.AppCompatSeekBar
+            android:id="@+id/seekbar_call_off_delay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvOffTime"
+            android:max="1500"
+            android:progress="500"
+            android:progressDrawable="@drawable/seekbar_progress"
+            android:thumb="@drawable/seekbar_thumb"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"/>
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:layout_below="@id/seekbar_call_off_delay"
+            android:background="?android:attr/listDivider"
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="16dp"/>
+
+
+        <TextView
+            android:id="@+id/btn_call_flash_test"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:text="@string/test"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true"
+            android:textSize="24sp"
+            android:layout_marginBottom="16dp"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

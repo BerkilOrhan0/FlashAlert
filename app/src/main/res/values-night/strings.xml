@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <string name="app_name">FlashAlert</string>
+        <!-- TODO: Remove or change this placeholder text -->
+        <string name="hello_blank_fragment">Hello blank fragment</string>
+        <string name="flas_on_call">Flas on Call</string>
+        <string name="flash_phone_status">Off</string>
+        <string name="turn_on_to_active">Turn on to active:</string>
+        <string name="flash_on_sms">Flash on SMS</string>
+        <string name="flash_on_notification">Flash on Notification</string>
+        <string name="status">Status:</string>
+        <string name="flashlight_speed">Flashlight Speed</string>
+        <string name="test">Test</string>
+        <string name="none">None</string>
+        <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">How to remove this application from the restricted list of power saving features on</string>
+        <string name="why_this_app_not_flashing_or_not_flashing_sometimes">Why this app not flashing or not flashing sometimes?</string>
+        <string name="what_permissions_dose_this_app_require">What permissions dose this app require?</string>
+        <string name="how_to_avoid_accidentally_closing_this_app">How to avoid accidentally closing this app?</string>
+    </resources>
+

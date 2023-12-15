@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shot"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/flashCallFragment"
+        android:name="com.example.flashalert.ui.fragment.FlashCallFragment"
+        android:label="FlashCallFragment"
+        tools:layout="@layout/fragment_flash_call">
+        <action
+            android:id="@+id/callToHome"
+            app:destination="@id/homeFragment" />
+
+        <toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.flashalert.ui.fragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting">
+        <action
+            android:id="@+id/settingToLanguage"
+            app:destination="@id/languageDialogFragment" />
+        <action
+            android:id="@+id/settingtoHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onBoarding1Fragment"
+        android:name="com.example.flashalert.onboarding.OnBoarding1Fragment"
+        android:label="fragment_on_boarding3"
+        tools:layout="@layout/fragment_on_boarding1">
+        <action
+            android:id="@+id/onBoardingToOnBoading2"
+            app:destination="@id/onBoarding2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding3Fragment"
+        android:name="com.example.flashalert.onboarding.OnBoarding3Fragment"
+        android:label="OnBoarding3Fragment"
+        tools:layout="@layout/fragment_on_boarding3">
+        <action
+            android:id="@+id/onBoardingToHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/onBoarding2Fragment"
+        android:name="com.example.flashalert.onboarding.OnBoarding2Fragment"
+        android:label="OnBoarding2Fragment"
+        tools:layout="@layout/fragment_on_boarding2">
+        <action
+            android:id="@+id/OnBoarding2ToOnBoarding3"
+            app:destination="@id/onBoarding3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.flashalert.ui.fragment.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeToCall"
+            app:destination="@id/flashCallFragment" />
+        <action
+            android:id="@+id/homeToNotificitaion"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/homeToSms"
+            app:destination="@id/flashSmsFragment" />
+        <action
+            android:id="@+id/homeToHelper"
+            app:destination="@id/helperFragment" />
+        <action
+            android:id="@+id/HomeToSetting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flashSmsFragment"
+        android:name="com.example.flashalert.ui.fragment.FlashSmsFragment"
+        android:label="FlashSmsFragment"
+        tools:layout="@layout/fragment_flash_sms">
+        <action
+            android:id="@+id/smsToHome"
+            app:destination="@id/homeFragment" />
+
+        <toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.example.flashalert.ui.fragment.NotificationFragment"
+        android:label="NotificationFragment"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/notificationToHome"
+            app:destination="@id/homeFragment" />
+
+        <toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back" />
+    </fragment>
+    <fragment
+        android:id="@+id/helperFragment"
+        android:name="com.example.flashalert.ui.fragment.HelperFragment"
+        android:label="HelperFragment"
+        tools:layout="@layout/fragment_helper" >
+        <action
+            android:id="@+id/helperToHome"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/languageDialogFragment"
+        android:name="com.example.flashalert.ui.fragment.LanguageDialogFragment"
+        android:label="LanguageDialogFragment" >
+        <action
+            android:id="@+id/languageToSetting"
+            app:destination="@id/settingFragment" />
+    </fragment>
+</navigation>
