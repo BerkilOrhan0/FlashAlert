@@ -36,9 +36,7 @@ class SettingFragment : Fragment() {
             navController.navigate(R.id.settingtoHome)
         }
 
-        binding?.rlLanguage?.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.settingToLanguage)
-        }
+
 
 
 

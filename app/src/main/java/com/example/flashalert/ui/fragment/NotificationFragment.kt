@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.flashalert.Broadcast.FlashLight
 import com.example.flashalert.R
 import com.example.flashalert.databinding.FragmentNotificationBinding
+import com.example.flashalert.prefence.MyPreferences
 import com.example.flashalert.viewmodel.NotificationViewModel
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
@@ -48,12 +49,12 @@ class NotificationFragment : Fragment() {
         }
 
         viewModel.onDelay.observe(viewLifecycleOwner) { value ->
-            binding?.tvNotifacationOnDelay?.text = value.toString()
+            binding?.tvAppOnDelay?.text = value.toString()
 
         }
 
         viewModel.offDelay.observe(viewLifecycleOwner) { value ->
-            binding?.tvNotifacationOffDelay?.text = value.toString()
+            binding?.tvAppOffDelay?.text = value.toString()
 
         }
 
@@ -62,10 +63,19 @@ class NotificationFragment : Fragment() {
 
         }
 
-        binding?.seekbarNotifacationOffDelay?.setOnSeekBarChangeListener(object :
+
+        val notificationTimeOnSeekBarValue =
+            MyPreferences.getInstance(requireContext()).prefNotificationTimeOn
+        binding?.seekbarNotifacitonOnDelay?.progress = notificationTimeOnSeekBarValue.toInt()
+        binding?.tvAppOnDelay?.text = notificationTimeOnSeekBarValue.toString()
+        binding?.seekbarNotifacitonOnDelay?.setOnSeekBarChangeListener(object :
             OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 viewModel.onDelay.value = progress
+                MyPreferences.getInstance(requireContext())
+                    .putSeekBarValue(MyPreferences.NOTIFICATION_TIME_ON, progress.toLong())
+                // TextView'ı güncelleme
+                binding?.tvAppOnDelay?.text = progress.toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -77,10 +87,18 @@ class NotificationFragment : Fragment() {
 
         }
 
+        val notificatiOffTimeOffSeekBarValue =
+            MyPreferences.getInstance(requireContext()).prefNotificationTimeOff
+        binding?.seekbarNotifacationOffDelay?.progress =notificatiOffTimeOffSeekBarValue.toInt()
+        binding?.tvAppOffDelay?.text = notificatiOffTimeOffSeekBarValue.toString()
         binding?.seekbarNotifacationOffDelay?.setOnSeekBarChangeListener(object :
             OnSeekBarChangeListener {
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 viewModel.offDelay.value = progress
+                MyPreferences.getInstance(requireContext())
+                    .putSeekBarValue(MyPreferences.NOTIFICATION_TIME_OFF, progress.toLong())
+                // TextView'ı güncelleme
+                binding?.tvAppOffDelay?.text = progress.toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -89,7 +107,7 @@ class NotificationFragment : Fragment() {
         })
 
         binding?.btnFlashAppTest?.setOnClickListener {
-            val flashJob:Job? = null
+            val flashJob: Job? = null
             flashReceiver.isFlashOn = !flashReceiver.isFlashOn
             if (flashReceiver.isFlashOn) {
                 // Coroutine başlat
@@ -100,11 +118,11 @@ class NotificationFragment : Fragment() {
                         val testonDelay = binding?.seekbarNotifacitonOnDelay?.progress ?: 0
                         val testoffDelay = binding?.seekbarNotifacationOffDelay?.progress ?: 0
                         // Flashı aç
-                        flashReceiver.flash( requireContext(),false, 0, 0, 10)
+                        flashReceiver.flash(requireContext(), false, 0, 0, 10)
                         // On delay süresi kadar bekle
                         delay(testoffDelay.toLong())
                         // Flashı kapat
-                        flashReceiver.flash( requireContext(),true, 0, 0, 10)
+                        flashReceiver.flash(requireContext(), true, 0, 0, 10)
                         // Off delay süresi kadar bekle
                         delay(testoffDelay.toLong())
                     }

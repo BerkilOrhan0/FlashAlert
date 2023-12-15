@@ -23,31 +23,7 @@
         android:theme="@style/Theme.MaterialComponents.DayNight"
         tools:targetApi="31">
 
-        <!-- Broadcast receiverinizi manifestinizde kaydetmeyin -->
-        <!-- <receiver
-            android:name=".Broadcast.CallReceiver"
-            android:exported="true"
-            android:enabled="true">
 
-            <intent-filter>
-                <action android:name="android.telephony.TelephonyManager.ACTION_PHONE_STATE_CHANGED" />
-
-            </intent-filter>
-
-        </receiver> -->
-
-
-        <receiver
-            android:name=".Broadcast.SmsReceiver"
-            android:exported="true">
-
-            <intent-filter>
-
-                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-
-            </intent-filter>
-
-        </receiver>
 
         <activity
             android:name=".MainActivity"

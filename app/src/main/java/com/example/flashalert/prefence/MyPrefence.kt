@@ -10,7 +10,6 @@ class MyPreferences private constructor(context: Context) {
     private val sharedPreferences: SharedPreferences =
         context.getSharedPreferences(SHARE_PREFERENCES, Context.MODE_PRIVATE)
 
-
     fun putSeekBarValue(key: String, value: Long) {
         sharedPreferences.edit {
             putLong(key, value)
@@ -20,39 +19,30 @@ class MyPreferences private constructor(context: Context) {
     var prefTheme: Int
         get() = sharedPreferences.getInt(PREF_THEME, 0)
         set(value) = sharedPreferences.edit { putInt(PREF_THEME, value) }
-
     var prefCallTimeOn: Long
         get() = sharedPreferences.getLong(CALL_TIME_ON, 500L)
         set(value) = sharedPreferences.edit { putLong(CALL_TIME_ON, value) }
-
     var prefCallTimeOff: Long
         get() = sharedPreferences.getLong(CALL_TIME_OFF, 500L)
         set(value) = sharedPreferences.edit { putLong(CALL_TIME_OFF, value) }
-
     var prefSmsTimeOn: Long
         get() = sharedPreferences.getLong(SMS_TIME_ON, 500L)
         set(value) = sharedPreferences.edit { putLong(SMS_TIME_ON, value) }
-
     var prefSmsTimeOff: Long
         get() = sharedPreferences.getLong(SMS_TIME_OFF, 500L)
         set(value) = sharedPreferences.edit { putLong(SMS_TIME_OFF, value) }
-
     var prefNotificationTimeOn: Long
         get() = sharedPreferences.getLong(NOTIFICATION_TIME_ON, 500L)
         set(value) = sharedPreferences.edit { putLong(NOTIFICATION_TIME_ON, value) }
-
     var prefNotificationTimeOff: Long
         get() = sharedPreferences.getLong(NOTIFICATION_TIME_OFF, 500L)
         set(value) = sharedPreferences.edit { putLong(NOTIFICATION_TIME_OFF, value) }
-
     var prefFlashOnCall: Boolean
         get() = sharedPreferences.getBoolean(PREF_FLASH_ON_CALL, false)
         set(value) = sharedPreferences.edit { putBoolean(PREF_FLASH_ON_CALL, value) }
-
     var prefFlashOnSms: Boolean
         get() = sharedPreferences.getBoolean(PREF_FLASH_ON_SMS, false)
         set(value) = sharedPreferences.edit { putBoolean(PREF_FLASH_ON_SMS, value) }
-
     var prefFlashOnNotification: Boolean
         get() = sharedPreferences.getBoolean(PREF_FLASH_ON_NOTIFICATION, false)
         set(value) = sharedPreferences.edit { putBoolean(PREF_FLASH_ON_NOTIFICATION, value) }
@@ -97,28 +87,33 @@ class MyPreferences private constructor(context: Context) {
         get() = sharedPreferences.getInt(PREF_CNT_OPEN_APP, 0)
         set(value) = sharedPreferences.edit { putInt(PREF_CNT_OPEN_APP, value) }
 
+    var prefSwitchValue: Boolean
+        get() = sharedPreferences.getBoolean(PREF_SWITCH_VALUE, false)
+        set(value) = sharedPreferences.edit { putBoolean(PREF_SWITCH_VALUE, value) }
+
     companion object {
+        const val PREF_SWITCH_VALUE = "PREF_SWITCH_VALUE"
         const val CALL_TIME_OFF = "CALL_TIME_OFF"
-        private const val CALL_TIME_ON = "CALL_TIME_ON"
-        private const val EXTRA_RATE_APP = "EXTRA_RATE_APP"
-        private const val IS_FIRST_TIME_LAUNCH = "IS_FIRST_TIME_LAUNCH"
-        private const val NOTIFICATION_TIME_OFF = "NOTIFICATION_TIME_OFF"
-        private const val NOTIFICATION_TIME_ON = "NOTIFICATION_TIME_ON"
-        private const val PREF_CNT_OPEN_APP = "PREF_CNT_OPEN_APP"
-        private const val PREF_FLASH_IN_SILENT_MODE = "PREF_FLASH_IN_SILENT_MODE"
-        private const val PREF_FLASH_IN_SOUND_MODE = "PREF_FLASH_IN_SOUND_MODE"
-        private const val PREF_FLASH_IN_VIBRATE_MODE = "PREF_FLASH_IN_VIBRATE_MODE"
-        private const val PREF_FLASH_ON_CALL = "PREF_FLASH_ON_CALL"
-        private const val PREF_FLASH_ON_NOTIFICATION = "PREF_FLASH_ON_NOTIFICATION"
-        private const val PREF_FLASH_ON_SMS = "PREF_FLASH_ON_SMS"
-        private const val PREF_LANGUAGE = "PREF_LANGUAGE"
-        private const val PREF_LANGUAGE_NAME = "PREF_LANGUAGE_NAME"
-        private const val PREF_NOT_FLASH_WHEN_SCREEN_ON = "PREF_NOT_FLASH_WHEN_SCREEN_ON"
-        private const val PREF_SHOW_SELECT_APP_TUTORIAL = "PREF_SHOW_SELECT_APP_TUTORIAL"
-        private const val PREF_THEME = "PREF_THEME"
-        private const val SHARE_PREFERENCES = "SHARE_PREFERENCES"
-        private const val SMS_TIME_OFF = "SMS_TIME_OFF"
-        private const val SMS_TIME_ON = "SMS_TIME_ON"
+        const val CALL_TIME_ON = "CALL_TIME_ON"
+        const val EXTRA_RATE_APP = "EXTRA_RATE_APP"
+        const val IS_FIRST_TIME_LAUNCH = "IS_FIRST_TIME_LAUNCH"
+        const val NOTIFICATION_TIME_OFF = "NOTIFICATION_TIME_OFF"
+        const val NOTIFICATION_TIME_ON = "NOTIFICATION_TIME_ON"
+        const val PREF_CNT_OPEN_APP = "PREF_CNT_OPEN_APP"
+        const val PREF_FLASH_IN_SILENT_MODE = "PREF_FLASH_IN_SILENT_MODE"
+        const val PREF_FLASH_IN_SOUND_MODE = "PREF_FLASH_IN_SOUND_MODE"
+        const val PREF_FLASH_IN_VIBRATE_MODE = "PREF_FLASH_IN_VIBRATE_MODE"
+        const val PREF_FLASH_ON_CALL = "PREF_FLASH_ON_CALL"
+        const val PREF_FLASH_ON_NOTIFICATION = "PREF_FLASH_ON_NOTIFICATION"
+        const val PREF_FLASH_ON_SMS = "PREF_FLASH_ON_SMS"
+        const val PREF_LANGUAGE = "PREF_LANGUAGE"
+        const val PREF_LANGUAGE_NAME = "PREF_LANGUAGE_NAME"
+        const val PREF_NOT_FLASH_WHEN_SCREEN_ON = "PREF_NOT_FLASH_WHEN_SCREEN_ON"
+        const val PREF_SHOW_SELECT_APP_TUTORIAL = "PREF_SHOW_SELECT_APP_TUTORIAL"
+        const val PREF_THEME = "PREF_THEME"
+        const val SHARE_PREFERENCES = "SHARE_PREFERENCES"
+        const val SMS_TIME_OFF = "SMS_TIME_OFF"
+        const val SMS_TIME_ON = "SMS_TIME_ON"
 
         // Singleton sınıfın tek örneğini tutan değişken
         private var instance: MyPreferences? = null

@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.example.flashalert.Broadcast.FlashLight
 import com.example.flashalert.R
 import com.example.flashalert.databinding.FragmentFlashSmsBinding
+import com.example.flashalert.prefence.MyPreferences
 import com.example.flashalert.viewmodel.SmsViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -54,11 +55,17 @@ class FlashSmsFragment : Fragment() {
 
         }
 
+        val smsTimeOnSeekBarValue = MyPreferences.getInstance(requireContext()).prefSmsTimeOn
+        binding?.seekbarSmsOnDelay?.progress = smsTimeOnSeekBarValue.toInt()
+        binding?.tvSmsOnDelay?.text = smsTimeOnSeekBarValue.toString()
 
         binding?.seekbarSmsOnDelay?.setOnSeekBarChangeListener(object : OnSeekBarChangeListener {
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                 viewmodel.onDelay.value = progress
+                MyPreferences.getInstance(requireContext()).putSeekBarValue(MyPreferences.SMS_TIME_ON, progress.toLong())
+                // TextView'ı güncelleme
+                binding?.tvSmsOnDelay?.text = progress.toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -66,10 +73,17 @@ class FlashSmsFragment : Fragment() {
 
         })
 
+        val smsTimeOffSeekBarValue = MyPreferences.getInstance(requireContext()).prefSmsTimeOff
+        binding?.seekbarSmsOffDelay?.progress = smsTimeOffSeekBarValue.toInt()
+        binding?.tvOffSmsDelay?.text = smsTimeOffSeekBarValue.toString()
+
         binding?.seekbarSmsOffDelay?.setOnSeekBarChangeListener(object :OnSeekBarChangeListener{
 
             override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
                viewmodel.offDelay.value = progress
+                MyPreferences.getInstance(requireContext()).putSeekBarValue(MyPreferences.SMS_TIME_OFF, progress.toLong())
+                // TextView'ı güncelleme
+                binding?.tvOffSmsDelay?.text = progress.toString()
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
