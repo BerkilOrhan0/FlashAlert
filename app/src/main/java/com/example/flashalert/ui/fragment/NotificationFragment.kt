@@ -1,5 +1,6 @@
 package com.example.flashalert.ui.fragment
 
+import com.example.flashalert.Broadcast.FlashLight
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -10,7 +11,6 @@ import android.widget.SeekBar.OnSeekBarChangeListener
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.flashalert.Broadcast.FlashLight
 import com.example.flashalert.R
 import com.example.flashalert.databinding.FragmentNotificationBinding
 import com.example.flashalert.prefence.MyPreferences
@@ -109,22 +109,26 @@ class NotificationFragment : Fragment() {
         binding?.btnFlashAppTest?.setOnClickListener {
             val flashJob: Job? = null
             flashReceiver.isFlashOn = !flashReceiver.isFlashOn
+
             if (flashReceiver.isFlashOn) {
                 // Coroutine başlat
+                val testOnDelay = binding?.seekbarNotifacitonOnDelay?.progress?.toLong() ?: 0
+                val testOffDelay = binding?.seekbarNotifacationOffDelay?.progress?.toLong() ?: 0
+
                 lifecycleScope.launch {
                     // Sonsuz döngü
                     while (flashReceiver.isFlashOn) {
-                        // Seekbar değerlerini al
-                        val testonDelay = binding?.seekbarNotifacitonOnDelay?.progress ?: 0
-                        val testoffDelay = binding?.seekbarNotifacationOffDelay?.progress ?: 0
-                        // Flashı aç
-                        flashReceiver.flash(requireContext(), false, 0, 0, 10)
+                        // Flash'ı aç
+                        flashReceiver.flash(context,
+                            onDelay = testOnDelay,
+                            offDelay = testOffDelay,
+                            count = 10
+                        )
                         // On delay süresi kadar bekle
-                        delay(testoffDelay.toLong())
-                        // Flashı kapat
-                        flashReceiver.flash(requireContext(), true, 0, 0, 10)
+                        delay(testOnDelay)
+                        // Flash'ı kapat
                         // Off delay süresi kadar bekle
-                        delay(testoffDelay.toLong())
+                        delay(testOffDelay)
                     }
                 }
                 binding?.btnFlashAppTest?.text = "Stop"
@@ -134,7 +138,6 @@ class NotificationFragment : Fragment() {
                 binding?.btnFlashAppTest?.text = "Start"
             }
         }
-
 
     }
 

@@ -6,7 +6,6 @@ import android.content.Context
 import android.os.Build
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.flashalert.Broadcast.FlashLight
 import com.example.flashalert.ManagePermissions
 
 class NotificationViewModel:ViewModel() {
@@ -15,15 +14,12 @@ class NotificationViewModel:ViewModel() {
     val offDelay = MutableLiveData<Int>()
     val callSwitch = MutableLiveData<Boolean>()
 
-    private val flashReceiver = FlashLight()
     private lateinit var managePermissions: ManagePermissions
     private val PermissionsRequestCode = 123
 
 
 
-    suspend fun flash(context: Context, onDelay: Long, offDelay: Long, count:Int){
-        flashReceiver.flash(context,false, onDelay, offDelay, count)
-    }
+
 
     fun checkPermissions(isChecked:Boolean,requireActivity: Activity){
         val list = listOf(

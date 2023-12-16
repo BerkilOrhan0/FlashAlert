@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         // CallReceiver'ı parametrelerle oluşturun
-        callReceiver = CallReceiver()
+        callReceiver = CallReceiver(this)
 
         // IntentFilter'ı oluşturun
         val callFilter = IntentFilter(TelephonyManager.ACTION_PHONE_STATE_CHANGED)
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         registerReceiver(callReceiver, callFilter)
 
         // SmsReceiver'ı parametrelerle oluşturun
-        smsReceiver = SmsReceiver()
+        smsReceiver = SmsReceiver(this)
 
         // IntentFilter'ı oluşturun
         val smsFilter = IntentFilter()

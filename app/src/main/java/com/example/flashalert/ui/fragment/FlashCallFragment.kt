@@ -1,29 +1,23 @@
 package com.example.flashalert.ui.fragment
 
+import com.example.flashalert.Broadcast.FlashLight
 import android.graphics.PorterDuff
-import android.graphics.PorterDuffColorFilter
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.SeekBar
 import android.widget.SeekBar.OnSeekBarChangeListener
-import android.widget.Switch
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.setupWithNavController
-import com.example.flashalert.Broadcast.FlashLight
 import com.example.flashalert.R
 import com.example.flashalert.databinding.FragmentFlashCallBinding
 import com.example.flashalert.databinding.FragmentHomeBinding
 import com.example.flashalert.prefence.MyPreferences
 import com.example.flashalert.viewmodel.CallViewModel
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
@@ -80,6 +74,8 @@ class FlashCallFragment : Fragment() {
                     .putSeekBarValue(MyPreferences.CALL_TIME_ON, progress.toLong())
                 // TextView'ı güncelleme
                 binding?.tvCallOnDelay?.text = progress.toString()
+                if (flashlight.isFlashOn) {
+                }
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -101,6 +97,8 @@ class FlashCallFragment : Fragment() {
                     .putSeekBarValue(MyPreferences.CALL_TIME_OFF, progress.toLong())
                 // TextView'ı güncelleme
                 binding?.tvOffCallDelay?.text = progress.toString()
+
+             
             }
 
             override fun onStartTrackingTouch(seekBar: SeekBar?) {}
@@ -114,12 +112,11 @@ class FlashCallFragment : Fragment() {
             // Switch durumunu MyPreferences sınıfında kaydetme
             val preferences = MyPreferences.getInstance(requireContext())
             preferences.prefSwitchValue = isChecked
-
+            updateUI(false)
             // Switch durumunu MyPreferences sınıfından okuma
             val flashOnCallEnabled = preferences.prefSwitchValue
 
             if (isChecked) {
-                updateUI(true)
                 binding?.tvStatus?.text = "On"
                 viewModel.checkPermissions(true, requireActivity())
                 homeBinding?.tvHomeCallStatus?.text = "On"
@@ -145,51 +142,31 @@ class FlashCallFragment : Fragment() {
 
         binding?.btnCallFlashTest?.setOnClickListener {
             flashlight.isFlashOn = !flashlight.isFlashOn
-            var flashJob: Job? = null // Coroutine job değişkeni
-            val scope = CoroutineScope(Dispatchers.IO)
-            scope.launch {
 
-            }
             if (flashlight.isFlashOn) {
-                // Coroutine başlat
+                val testOffDelay = binding?.seekbarCallOffDelay?.progress?.toLong() ?: 500
+                val testOnDelay = binding?.seekbarCallOnDelay?.progress?.toLong() ?: 500
+
                 lifecycleScope.launch {
-                    // Sonsuz döngü
                     while (flashlight.isFlashOn) {
-                        // Seekbar değerlerini al
-                        val testoffDelay = binding?.seekbarCallOnDelay?.progress ?: 0
-                        val testOnDelay = binding?.seekbarCallOffDelay?.progress ?: 0
-                        // Flashı aç
                         flashlight.flash(
-                            requireContext(), false,
-                            testOnDelay.toLong(),
-                            testoffDelay.toLong(),
-                            10
+                            context,
+                            onDelay = testOnDelay,
+                            offDelay = testOffDelay,
+                            count = 10
                         )
-                        // On delay süresi kadar bekle
-                        delay(testOnDelay.toLong())
-                        // Flashı kapat
-                        flashlight.flash(
-                            requireContext(), false,
-                            testOnDelay.toLong(),
-                            testoffDelay.toLong(),
-                            0
-                        )
-                        // Off delay süresi kadar bekle
-                        delay(testoffDelay.toLong())
+                        delay(testOnDelay)
+                        delay(testOffDelay)
                     }
                 }
                 binding?.btnCallFlashTest?.text = "Stop"
             } else {
-                // Coroutine durdur
-                flashJob?.cancel()
-                flashlight.flash(requireContext(), false, 0, 0, 0)
-                binding?.btnCallFlashTest?.text = "start"
+                binding?.btnCallFlashTest?.text = "Start"
             }
         }
 
     }
-
-    fun updateUI(isChecked: Boolean) {
+        fun updateUI(isChecked: Boolean) {
         val iconColor = if (isChecked) {
             // Switch açıkken ikon rengi
             ContextCompat.getColor(requireContext(), R.color.light_switch_true_color)
@@ -201,5 +178,6 @@ class FlashCallFragment : Fragment() {
         // Ikonu güncelle
         binding?.icPhone?.setColorFilter(iconColor)
     }
-
 }
+
+

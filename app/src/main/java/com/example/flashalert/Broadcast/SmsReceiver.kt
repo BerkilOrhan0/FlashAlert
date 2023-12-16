@@ -1,25 +1,37 @@
+
+import android.provider.Telephony
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
 import android.os.Build
-import android.provider.Telephony
-import android.telephony.SmsMessage
-import androidx.core.content.ContextCompat
 import com.example.flashalert.Broadcast.FlashLight
 
-class SmsReceiver : BroadcastReceiver() {
+class SmsReceiver(private val context: Context) : BroadcastReceiver() {
 
-    private val flashLight = FlashLight()
+    private var flashLight= FlashLight()
 
     override fun onReceive(context: Context?, intent: Intent?) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && intent?.action.equals(Telephony.Sms.Intents.SMS_RECEIVED_ACTION)) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q && intent?.action == Telephony.Sms.Intents.SMS_RECEIVED_ACTION) {
             val smsMessages = Telephony.Sms.Intents.getMessagesFromIntent(intent)
             if (smsMessages != null && smsMessages.isNotEmpty()) {
-                flashLight.flash(context!!, true, 500, 500, 10)
+                handleSmsReceived(context)
             }
         }
     }
+
+    private fun handleSmsReceived(context: Context?) {
+        context?.let {
+            flashLight?.isFlashOn = true
+            flashLight?.flash(context,
+                onDelay = 500,
+                offDelay = 500,
+                count = 10
+            )
+
+        }
+    }
+
 
 
     companion object {
@@ -33,5 +45,4 @@ class SmsReceiver : BroadcastReceiver() {
             context.unregisterReceiver(smsReceiver)
         }
     }
-
 }

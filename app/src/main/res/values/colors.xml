@@ -25,7 +25,6 @@
     <color name="design_dark_default_color_on_surface">#ffffff</color>
     <color name="design_dark_default_color_primary">#ba86fc</color>
     <color name="design_dark_default_color_primary_dark">#000000</color>
-    <color name="design_dark_default_color_primary_variant">#3700b3</color>
     <color name="design_dark_default_color_secondary">#03dac6</color>
     <color name="design_dark_default_color_secondary_variant">#03dac6</color>
     <color name="design_dark_default_color_surface">#121212</color>

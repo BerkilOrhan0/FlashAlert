@@ -17,5 +17,195 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
+    <RelativeLayout
+        android:id="@+id/rl_saving_features"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/shape_relative_bg">
+
+        <ImageView
+            android:id="@+id/img_features"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_question" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toStartOf="@id/ic_next_1"
+            android:layout_toEndOf="@id/img_features"
+            android:text="How to remove this application from the resticted list of power saving features on"
+            android:textColor="@color/light_text_color"
+            android:textSize="22sp" />
+
+
+        <ImageView
+            android:id="@+id/ic_next_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_next" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_flashing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_saving_features"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/shape_relative_bg">
+
+        <ImageView
+            android:id="@+id/img_flashing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_question" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toStartOf="@id/ic_next_2"
+            android:layout_toEndOf="@id/img_flashing"
+            android:text="Why this app not flashing or not flashing sometimes?"
+            android:textColor="@color/light_text_color"
+            android:textSize="22sp" />
+
+
+        <ImageView
+            android:id="@+id/ic_next_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_closing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_flashing"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/shape_relative_bg">
+
+        <ImageView
+            android:id="@+id/img_closing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_question" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toStartOf="@id/ic_next_3"
+            android:layout_toEndOf="@id/img_closing"
+            android:text="How to avoid accidentally closing this app?"
+            android:textColor="@color/light_text_color"
+            android:textSize="22sp" />
+
+
+        <ImageView
+            android:id="@+id/ic_next_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_permissions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_closing"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="18dp"
+        android:background="@drawable/shape_relative_bg">
+
+        <ImageView
+            android:id="@+id/img_permissions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:padding="8dp"
+            android:src="@drawable/ic_question" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginBottom="14dp"
+            android:layout_toStartOf="@id/ic_next_4"
+            android:layout_toEndOf="@id/img_permissions"
+            android:text="What permissions dose this app require?"
+            android:textColor="@color/light_text_color"
+            android:textSize="22sp" />
+
+
+        <ImageView
+            android:id="@+id/ic_next_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/ic_next" />
+
+    </RelativeLayout>
+
+
+
+
 
 </RelativeLayout>
