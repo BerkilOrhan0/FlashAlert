@@ -20,7 +20,7 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/rl_sound_mode"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,165 +28,180 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="14dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/shape_relative_bg">
+        android:background="@color/cardview_light_background"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp">
 
         <RelativeLayout
-            android:id="@+id/rl_sound"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/ic_sound"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
-                android:padding="12dp"
-                android:src="@drawable/ic_sound_mode" />
+            <RelativeLayout
+                android:id="@+id/rl_sound"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/ic_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:padding="12dp"
+                    android:src="@drawable/ic_sound_mode" />
 
 
-            <TextView
-                android:id="@+id/tv_soundmode_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@id/ic_sound"
-                android:text="Sound Mode"
-                android:textSize="26sp"
-                android:textColor="@color/light_text_color" />
+                <TextView
+                    android:id="@+id/tv_soundmode_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/ic_sound"
+                    android:text="Sound Mode"
+                    android:textColor="@color/Gray"
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_soundmode_description"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="8dp"
-                android:layout_marginBottom="12dp"
-                android:layout_toStartOf="@id/sw_sound"
-                android:layout_toEndOf="@id/ic_sound"
-                android:text="Flash light blinking when your phone is in sound mode"
-                android:textSize="22sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold"/>
 
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/sw_sound"
-                android:layout_width="wrap_content"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_soundmode_description"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_toStartOf="@id/sw_sound"
+                    android:layout_toEndOf="@id/ic_sound"
+                    android:textColor="@color/Gray"
+                    android:text="Flash light blinking when your phone is in sound mode"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_sound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_vibrate"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="12dp" />
+                android:layout_below="@id/rl_sound">
+
+                <ImageView
+                    android:id="@+id/ic_muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_sound_muted" />
+
+
+                <TextView
+                    android:id="@+id/tv_mutedmode_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/ic_muted"
+                    android:text="Silent Mode"
+                    android:textColor="@color/Gray"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_mutedmode_description"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_toStartOf="@id/sw_muted"
+                    android:layout_toEndOf="@id/ic_muted"
+                    android:textColor="@color/Gray"
+                    android:text="Flash light blinking when your phone is in silent mode"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_vibrate">
+
+                <ImageView
+                    android:id="@+id/ic_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="36dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_sound_vibration" />
+
+
+                <TextView
+                    android:id="@+id/tv_vibratemode_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_toEndOf="@id/ic_vibrate"
+                    android:text="Vibrate Mode"
+                    android:textColor="@color/Gray"
+                    android:textStyle="bold"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_vibratemode_description"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_toStartOf="@id/sw_vibrate"
+                    android:layout_toEndOf="@id/ic_vibrate"
+                    android:textColor="@color/Gray"
+                    android:text="Flash light blinking when your phone is in vibrate mode"
+                    android:textSize="22sp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/sw_vibrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="12dp" />
+
+            </RelativeLayout>
 
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/rl_vibrate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/rl_sound">
 
-            <ImageView
-                android:id="@+id/ic_muted"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
-                android:padding="8dp"
-                android:src="@drawable/ic_sound_muted" />
+    </androidx.cardview.widget.CardView>
 
 
-            <TextView
-                android:id="@+id/tv_mutedmode_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@id/ic_muted"
-                android:text="Silent Mode"
-                android:textSize="26sp"
-
-                android:textColor="@color/light_text_color"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_mutedmode_description"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginBottom="12dp"
-                android:layout_toStartOf="@id/sw_muted"
-                android:layout_toEndOf="@id/ic_muted"
-                android:text="Flash light blinking when your phone is in silent mode"
-                android:textSize="22sp" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/sw_muted"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="12dp" />
-
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/rl_vibrate">
-
-            <ImageView
-                android:id="@+id/ic_vibrate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
-                android:padding="8dp"
-                android:src="@drawable/ic_sound_vibration" />
-
-
-            <TextView
-                android:id="@+id/tv_vibratemode_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="12dp"
-                android:layout_toEndOf="@id/ic_vibrate"
-                android:text="Vibrate Mode"
-                android:textColor="@color/light_text_color"
-                android:textSize="26sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/tv_vibratemode_description"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="16dp"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="12dp"
-                android:layout_toStartOf="@id/sw_vibrate"
-                android:layout_toEndOf="@id/ic_vibrate"
-                android:text="Flash light blinking when your phone is in vibrate mode"
-                android:textSize="22sp" />
-
-            <androidx.appcompat.widget.SwitchCompat
-                android:id="@+id/sw_vibrate"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:layout_marginEnd="12dp" />
-
-        </RelativeLayout>
-
-    </RelativeLayout>
-
-
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/rl_flash_screen"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -196,127 +211,145 @@
         android:layout_marginEnd="10dp"
         android:background="@drawable/shape_relative_bg">
 
-        <ImageView
-            android:id="@+id/ic_lightning"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_lightning" />
-
-        <TextView
-            android:id="@+id/tv_flash_description"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="16dp"
+            android:layout_height="wrap_content">
 
-            android:layout_toStartOf="@id/sw_flash_screen"
-            android:layout_toEndOf="@id/ic_lightning"
-            android:text="Do not flash the flash while the screen is on"
-            android:textColor="@color/light_text_color"
-            android:textSize="22sp"/>
+            <ImageView
+                android:id="@+id/ic_lightning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_lightning" />
+
+            <TextView
+                android:id="@+id/tv_flash_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toStartOf="@id/sw_flash_screen"
+                android:layout_toEndOf="@id/ic_lightning"
+                android:text="Do not flash the flash while the screen is on"
+                android:textColor="@color/Gray"
+                android:textSize="22sp" />
 
 
-        <androidx.appcompat.widget.SwitchCompat
-            android:id="@+id/sw_flash_screen"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="12dp"/>
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/sw_flash_screen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="12dp" />
+
+        </RelativeLayout>
 
 
-    </RelativeLayout>
+    </androidx.cardview.widget.CardView>
 
-    <RelativeLayout
-       android:id="@+id/rl_language"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/rl_language"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/rl_flash_screen"
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/shape_relative_bg">
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp">
 
-        <ImageView
-            android:id="@+id/ic_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="6dp"
-            android:layout_marginTop="12dp"
-            android:padding="8dp"
-            android:src="@drawable/ic_language" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_language"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="16dp"
-            android:layout_toEndOf="@id/ic_language"
-            android:text="Language"
-            android:textSize="24sp"
-            android:textColor="@color/light_text_color"/>
+            <ImageView
+                android:id="@+id/ic_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginTop="12dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_language" />
 
-       <ImageView
-           android:id="@+id/ic_next"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:src="@drawable/ic_next"
-           android:layout_alignParentEnd="true"
-           android:layout_centerVertical="true"
-           android:layout_marginEnd="8dp"/>
+            <TextView
+                android:id="@+id/tv_language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@id/ic_language"
+                android:text="Language"
+                android:textColor="@color/Gray"
+                android:textSize="24sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Language"
-            android:layout_toStartOf="@id/ic_next"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="8dp"
-            android:textSize="24sp"
-            android:textColor="@color/dark_text_hint_color"/>
+            <ImageView
+                android:id="@+id/ic_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_next" />
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="8dp"
+                android:layout_toStartOf="@id/ic_next"
+                android:text="Language"
+                android:textColor="@color/dark_text_hint_color"
+                android:textSize="24sp" />
 
-    <RelativeLayout
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/shape_relative_bg"
         android:layout_below="@id/rl_language"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:layout_marginStart="12dp">
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp">
 
-        <ImageView
-            android:id="@+id/ic_rate"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_rate"
-            android:padding="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rate App"
-            android:layout_toEndOf="@id/ic_rate"
-            android:layout_marginStart="10dp"
-            android:layout_centerVertical="true"
-            android:textColor="@color/light_text_color"
-            android:textSize="22sp"/>
+            <ImageView
+                android:id="@+id/ic_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:padding="8dp"
+                android:src="@drawable/ic_rate" />
 
-    </RelativeLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/ic_rate"
+                android:text="Rate App"
+                android:textColor="@color/Gray"
+                android:textSize="22sp" />
 
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>
 

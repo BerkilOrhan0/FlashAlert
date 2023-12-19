@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appbar"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
-            android:layout_height="?attr/actionBarSize"
             android:layout_width="match_parent"
-            app:menu="@menu/appbar_menu"/>
+            android:layout_height="?attr/actionBarSize"
+            app:menu="@menu/appbar_menu" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -23,172 +23,198 @@
         android:id="@+id/img_flashlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_flashlight"
         android:layout_below="@id/appbar"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="58dp"
-        android:layout_centerHorizontal="true"/>
+        android:src="@drawable/ic_flashlight" />
 
 
     <TextView
         android:id="@+id/tv_active"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/turn_on_to_active"
         android:layout_below="@id/img_flashlogo"
-        android:layout_marginTop="18dp"
         android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/turn_on_to_active"
+        android:textColor="#D5CFCF"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:textColor="#D5CFCF"/>
+        android:textStyle="bold" />
 
-    <RelativeLayout
+    <androidx.cardview.widget.CardView
         android:id="@+id/rl_flash_phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_below="@id/tv_active"
-        android:background="@drawable/shape_relative_bg"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp">
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/cardview_light_background"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="4dp">
 
-        <ImageView
-            android:id="@+id/ic_phone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_phone"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="18dp"
-            android:layout_marginStart="14dp"
-            android:padding="12dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:textStyle="bold"
-            android:id="@+id/tv_flash_call"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="14dp"
-            android:layout_toEndOf="@id/ic_phone"
-            android:textColor="@color/gntGray"
-            android:text="@string/flas_on_call"
-            android:textSize="24sp" />
+            <ImageView
+                android:id="@+id/ic_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_phone" />
 
-        <TextView
-            android:id="@+id/tv_home_call_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flash_phone_status"
-            android:layout_below="@id/tv_flash_call"
-            android:layout_toEndOf="@id/ic_phone"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="14dp"
-            android:layout_marginStart="12dp"
-            android:textSize="22sp"
-            android:textColor="#AAA0A0"
-            android:fontFamily="@font/cousine"/>
+            <TextView
+                android:id="@+id/tv_flash_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@id/ic_phone"
+                android:text="@string/flas_on_call"
+                android:textColor="@color/Gray"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_home_call_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_flash_call"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="14dp"
+                android:layout_toEndOf="@id/ic_phone"
+                android:fontFamily="@font/cousine"
+                android:text="@string/flash_phone_status"
+                android:textColor="#AAA0A0"
+                android:textSize="22sp" />
 
-    <RelativeLayout
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/rl_flash_sms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_below="@id/rl_flash_phone"
-        android:background="@drawable/shape_relative_bg"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp">
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@color/cardview_light_background"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="14dp">
 
-        <ImageView
-            android:id="@+id/ic_sms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_message"
-            android:layout_centerVertical="true"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="18dp"
-            android:layout_marginStart="14dp"
-            android:padding="12dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_flash_sms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flash_on_sms"
-            android:layout_toEndOf="@id/ic_sms"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="14dp"
-            android:textSize="24sp"
-            android:textColor="@color/gntGray"
-            android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/ic_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_message" />
 
-        <TextView
-            android:id="@+id/tv_home_sms_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flash_phone_status"
-            android:layout_below="@id/tv_flash_sms"
-            android:layout_toEndOf="@id/ic_sms"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="14dp"
-            android:layout_marginStart="12dp"
-            android:textSize="22sp"
-            android:textColor="#AAA0A0"
-            android:fontFamily="@font/scada"/>
+            <TextView
+                android:id="@+id/tv_flash_sms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@id/ic_sms"
+                android:text="@string/flash_on_sms"
+                android:textColor="@color/Gray"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_home_sms_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_flash_sms"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="14dp"
+                android:layout_toEndOf="@id/ic_sms"
+                android:fontFamily="@font/scada"
+                android:text="@string/flash_phone_status"
+                android:textColor="#AAA0A0"
+                android:textSize="22sp" />
 
-    <RelativeLayout
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/rl_flash_notification"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
         android:layout_below="@id/rl_flash_sms"
-        android:background="@drawable/shape_relative_bg"
         android:layout_marginStart="12dp"
-        android:layout_marginEnd="12dp">
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="14dp">
 
-        <ImageView
-            android:id="@+id/ic_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:src="@drawable/ic_notification"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="18dp"
-            android:layout_marginStart="14dp"
-            android:padding="12dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-        <TextView
-            android:id="@+id/tv_flash_notification"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flash_on_notification"
-            android:layout_toEndOf="@id/ic_notification"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="14dp"
-            android:textSize="24sp"
-            android:textColor="@color/gntGray"
-            android:textStyle="bold"/>
+            <ImageView
+                android:id="@+id/ic_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="14dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="18dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_notification" />
 
-        <TextView
-            android:id="@+id/tv_home_notification_status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/flash_phone_status"
-            android:layout_below="@id/tv_flash_notification"
-            android:layout_toEndOf="@id/ic_notification"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="14dp"
-            android:layout_marginStart="12dp"
-            android:textSize="22sp"
-            android:textColor="#AAA0A0"
-            android:fontFamily="@font/scada"/>
+            <TextView
+                android:id="@+id/tv_flash_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                android:layout_toEndOf="@id/ic_notification"
+                android:text="@string/flash_on_notification"
+                android:textColor="@color/Gray"
+                android:textSize="24sp"
+                android:textStyle="bold" />
 
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/tv_home_notification_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_flash_notification"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="14dp"
+                android:layout_toEndOf="@id/ic_notification"
+                android:fontFamily="@font/scada"
+                android:text="@string/flash_phone_status"
+                android:textColor="#AAA0A0"
+                android:textSize="22sp" />
 
 
+        </RelativeLayout>
 
+
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

@@ -1,12 +1,16 @@
 package com.example.flashalert.ui.fragment
 
 import android.os.Bundle
+import android.preference.PreferenceManager
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.app.ActivityCompat.recreate
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
@@ -15,6 +19,7 @@ import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
 import com.example.flashalert.R
 import com.example.flashalert.databinding.FragmentHomeBinding
+import com.example.flashalert.prefence.MyPreferences
 
 
 class HomeFragment : Fragment() {
@@ -23,6 +28,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding
 
     private lateinit var navController: NavController
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -66,6 +72,12 @@ class HomeFragment : Fragment() {
                     true
                 }
 
+                R.id.ic_dark_mode -> {
+                    toggleDarkMode()
+                    updateDarkModeIcon(item)
+                    true
+                }
+
                 else -> false
             }
         }
@@ -73,9 +85,35 @@ class HomeFragment : Fragment() {
 
     }
 
-    override fun onResume() {
-        super.onResume()
-        HomeFragment()
+    private fun toggleDarkMode() {
+        val isNightMode =
+            AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+        val newMode =
+            if (isNightMode) AppCompatDelegate.MODE_NIGHT_NO else AppCompatDelegate.MODE_NIGHT_YES
+        AppCompatDelegate.setDefaultNightMode(newMode)
+
+        saveThemeMode(newMode)
+
+        recreate(requireActivity()) // Aktiviteyi yeniden oluşturarak temayı güncelle
     }
 
+    private fun updateDarkModeIcon(item: MenuItem) {
+        val isNightMode =
+            AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
+
+        // Update the icon based on the current mode
+        if (isNightMode) {
+            item.setIcon(R.drawable.ic_moon) // Change to the light mode icon
+        } else {
+            item.setIcon(R.drawable.ic_sun) // Change to the dark mode icon
+        }
+
+        requireActivity().invalidateOptionsMenu()
+    }
+
+    private fun saveThemeMode(themeMode: Int) {
+        val preferences = MyPreferences.getInstance(requireContext())
+        preferences.prefTheme = themeMode
+
+    }
 }
