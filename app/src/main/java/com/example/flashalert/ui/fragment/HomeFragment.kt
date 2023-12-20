@@ -101,11 +101,10 @@ class HomeFragment : Fragment() {
         val isNightMode =
             AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_YES
 
-        // Update the icon based on the current mode
         if (isNightMode) {
-            item.setIcon(R.drawable.ic_moon) // Change to the light mode icon
+            item.setIcon(R.drawable.ic_moon)
         } else {
-            item.setIcon(R.drawable.ic_sun) // Change to the dark mode icon
+            item.setIcon(R.drawable.ic_sun)
         }
 
         requireActivity().invalidateOptionsMenu()

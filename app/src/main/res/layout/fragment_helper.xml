@@ -52,7 +52,7 @@
                 android:layout_marginBottom="14dp"
                 android:layout_toStartOf="@id/ic_next_1"
                 android:layout_toEndOf="@id/img_features"
-                android:text="How to remove this application from the resticted list of power saving features on"
+                android:text="@string/how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 
@@ -107,7 +107,7 @@
                 android:layout_marginBottom="14dp"
                 android:layout_toStartOf="@id/ic_next_2"
                 android:layout_toEndOf="@id/img_flashing"
-                android:text="Why this app not flashing or not flashing sometimes?"
+                android:text="@string/why_this_app_not_flashing_or_not_flashing_sometimes"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 
@@ -162,7 +162,7 @@
                 android:layout_marginBottom="14dp"
                 android:layout_toStartOf="@id/ic_next_3"
                 android:layout_toEndOf="@id/img_closing"
-                android:text="How to avoid accidentally closing this app?"
+                android:text="@string/how_to_avoid_accidentally_closing_this_app"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 
@@ -215,7 +215,7 @@
                 android:layout_marginBottom="14dp"
                 android:layout_toStartOf="@id/ic_next_4"
                 android:layout_toEndOf="@id/img_permissions"
-                android:text="What permissions dose this app require?"
+                android:text="@string/what_permissions_dose_this_app_require"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 

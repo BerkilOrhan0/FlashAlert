@@ -16,6 +16,20 @@ class MyPreferences private constructor(context: Context) {
         }
     }
 
+    fun saveLanguagePreferences() {
+        sharedPreferences.edit {
+            putString(PREF_LANGUAGE, prefLanguage)
+            putString(PREF_LANGUAGE_NAME, prefLanguageName)
+        }
+    }
+
+    fun loadLanguagePreferences() {
+        prefLanguage = sharedPreferences.getString(PREF_LANGUAGE, null) ?: ""
+        prefLanguageName = sharedPreferences.getString(PREF_LANGUAGE_NAME, null) ?: ""
+    }
+
+
+
     var prefTheme: Int
         get() = sharedPreferences.getInt(PREF_THEME, 0)
         set(value) = sharedPreferences.edit { putInt(PREF_THEME, value) }

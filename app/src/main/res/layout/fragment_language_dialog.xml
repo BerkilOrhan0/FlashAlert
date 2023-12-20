@@ -44,7 +44,7 @@
             android:layout_toEndOf="@id/ic_english"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
-            android:text="Englısh"
+            android:text="@string/english"
             android:layout_marginStart="14dp"/>
 
 
@@ -74,7 +74,7 @@
             android:layout_toEndOf="@id/ic_vietnam"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
-            android:text="Chine"
+            android:text="@string/chine"
             android:layout_marginStart="14dp"/>
 
 
@@ -101,7 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Portugal"
+            android:text="@string/portugal"
             android:layout_toEndOf="@id/ic_portugal"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -132,7 +132,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Spainish"
+            android:text="@string/spainish"
             android:layout_toEndOf="@id/ic_spainish"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -162,7 +162,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Japanese"
+            android:text="@string/japanese"
             android:layout_toEndOf="@id/ic_japanese"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -192,7 +192,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="German"
+            android:text="@string/german"
             android:layout_toEndOf="@id/ic_german"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -221,7 +221,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Polish"
+            android:text="@string/polish"
             android:layout_toEndOf="@id/ic_polish"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -250,7 +250,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Italian"
+            android:text="@string/italian"
             android:layout_toEndOf="@id/ic_italian"
             android:layout_marginTop="12dp"
             android:textSize="26sp"
@@ -258,34 +258,7 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/rl_french"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="14dp"
-        android:layout_below="@id/rl_italian">
 
-        <ImageView
-            android:id="@+id/ic_french"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/flag_france"
-            android:layout_marginTop="12dp"
-            android:layout_marginBottom="12dp"
-            android:layout_marginStart="14dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Italian"
-            android:layout_toEndOf="@id/ic_french"
-            android:layout_marginTop="12dp"
-            android:textSize="26sp"
-            android:layout_marginStart="14dp"/>
-
-    </RelativeLayout>
 
     <RelativeLayout
         android:id="@+id/rl_india"
@@ -294,7 +267,7 @@
         android:layout_marginStart="14dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="14dp"
-        android:layout_below="@id/rl_french">
+        android:layout_below="@id/rl_italian">
 
         <ImageView
             android:id="@+id/ic_india"
@@ -308,7 +281,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hindi"
+            android:text="@string/hindi"
             android:layout_toEndOf="@id/ic_india"
             android:layout_marginTop="12dp"
             android:textSize="26sp"

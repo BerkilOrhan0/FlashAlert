@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
                 android:layout_toEndOf="@id/tv_status"
-                android:text="Off"
+                android:text="@string/off"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -100,7 +100,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:text="Select app"
+                android:text="@string/select_app"
                 android:textSize="28sp"
                 android:textStyle="bold" />
 
@@ -163,7 +163,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="18dp"
-                android:text="On time"
+                android:text="@string/on_time"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -175,7 +175,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="12dp"
-                android:text="ms"
+                android:text="@string/ms"
                 android:textColor="#988F8F"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -187,7 +187,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="8dp"
                 android:layout_toStartOf="@id/tv_ms"
-                android:text="delay"
+                android:text="@string/delay"
                 android:textColor="#988F8F"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -212,7 +212,7 @@
                 android:layout_below="@id/seekbar_notifaciton_on_delay"
                 android:layout_marginStart="12dp"
                 android:layout_marginTop="24dp"
-                android:text="Off time"
+                android:text="@string/off_time"
                 android:textSize="22sp"
                 android:textStyle="bold" />
 
@@ -225,7 +225,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="12dp"
-                android:text="ms"
+                android:text="@string/ms"
                 android:textColor="#988F8F"
                 android:textSize="20sp"
                 android:textStyle="bold" />
@@ -238,7 +238,7 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginEnd="8dp"
                 android:layout_toStartOf="@id/tv_ms"
-                android:text="delay"
+                android:text="@string/delay"
                 android:textColor="#988F8F"
                 android:textSize="20sp"
                 android:textStyle="bold" />

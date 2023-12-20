@@ -59,11 +59,11 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
                     android:layout_toEndOf="@id/ic_sound"
-                    android:text="Sound Mode"
+                    android:text="@string/sound_mode"
                     android:textColor="@color/Gray"
 
                     android:textSize="24sp"
-                    android:textStyle="bold"/>
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -75,8 +75,8 @@
                     android:layout_marginBottom="12dp"
                     android:layout_toStartOf="@id/sw_sound"
                     android:layout_toEndOf="@id/ic_sound"
+                    android:text="@string/flash_light_blinking_when_your_phone_is_in_sound_mode"
                     android:textColor="@color/Gray"
-                    android:text="Flash light blinking when your phone is in sound mode"
                     android:textSize="22sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -113,10 +113,10 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
                     android:layout_toEndOf="@id/ic_muted"
-                    android:text="Silent Mode"
+                    android:text="@string/silent_mode"
                     android:textColor="@color/Gray"
-                    android:textStyle="bold"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -128,8 +128,8 @@
                     android:layout_marginBottom="12dp"
                     android:layout_toStartOf="@id/sw_muted"
                     android:layout_toEndOf="@id/ic_muted"
+                    android:text="@string/flash_light_blinking_when_your_phone_is_in_silent_mode"
                     android:textColor="@color/Gray"
-                    android:text="Flash light blinking when your phone is in silent mode"
                     android:textSize="22sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -166,10 +166,10 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginTop="12dp"
                     android:layout_toEndOf="@id/ic_vibrate"
-                    android:text="Vibrate Mode"
+                    android:text="@string/vibrate_mode"
                     android:textColor="@color/Gray"
-                    android:textStyle="bold"
-                    android:textSize="24sp" />
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -181,8 +181,8 @@
                     android:layout_marginBottom="12dp"
                     android:layout_toStartOf="@id/sw_vibrate"
                     android:layout_toEndOf="@id/ic_vibrate"
+                    android:text="@string/flash_light_blinking_when_your_phone_is_in_vibrate_mode"
                     android:textColor="@color/Gray"
-                    android:text="Flash light blinking when your phone is in vibrate mode"
                     android:textSize="22sp" />
 
                 <androidx.appcompat.widget.SwitchCompat
@@ -209,7 +209,9 @@
         android:layout_marginStart="10dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="10dp"
-        android:background="@drawable/shape_relative_bg">
+        android:background="@color/cardview_light_background"
+        app:cardCornerRadius="14dp"
+        app:cardElevation="2dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -235,7 +237,7 @@
                 android:layout_marginBottom="16dp"
                 android:layout_toStartOf="@id/sw_flash_screen"
                 android:layout_toEndOf="@id/ic_lightning"
-                android:text="Do not flash the flash while the screen is on"
+                android:text="@string/do_not_flash_the_flash_while_the_screen_is_on"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 
@@ -262,7 +264,9 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="10dp"
         app:cardCornerRadius="14dp"
-        app:cardElevation="2dp">
+        app:cardElevation="2dp"
+        android:focusable="true"
+        android:clickable="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -286,7 +290,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="16dp"
                 android:layout_toEndOf="@id/ic_language"
-                android:text="Language"
+                android:text="@string/language"
                 android:textColor="@color/Gray"
                 android:textSize="24sp" />
 
@@ -305,7 +309,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginEnd="8dp"
                 android:layout_toStartOf="@id/ic_next"
-                android:text="Language"
+                android:text="@string/language"
                 android:textColor="@color/dark_text_hint_color"
                 android:textSize="24sp" />
 
@@ -343,7 +347,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="10dp"
                 android:layout_toEndOf="@id/ic_rate"
-                android:text="Rate App"
+                android:text="@string/rate_app"
                 android:textColor="@color/Gray"
                 android:textSize="22sp" />
 

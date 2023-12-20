@@ -34,13 +34,23 @@ class SettingFragment : Fragment() {
         toolbar?.setTitle("Setting")
         toolbar?.setNavigationOnClickListener {
             navController.navigate(R.id.settingtoHome)
+
+            loadLanguage()
+
+
+        }
+
+        binding!!.rlLanguage.setOnClickListener {
+            findNavController().navigate(R.id.settingToLanguage)
         }
 
 
 
 
+    }
 
-
+    private fun loadLanguage() {
+        TODO("Not yet implemented")
     }
 
 

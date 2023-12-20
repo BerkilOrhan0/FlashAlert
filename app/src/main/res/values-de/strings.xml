@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">Blitzlicht bei Anruf</string>
+    <string name="flash_phone_status">Aus</string>
+    <string name="turn_on_to_active">Einschalten, um zu aktivieren:</string>
+    <string name="flash_on_sms">Blitzlicht bei SMS</string>
+    <string name="flash_on_notification">Blitzlicht bei Benachrichtigung</string>
+    <string name="status">Status:</string>
+    <string name="flashlight_speed">Taschenlampengeschwindigkeit</string>
+    <string name="test">Test</string>
+    <string name="none">Keine</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">Wie entferne ich diese Anwendung aus der eingeschränkten Liste der Energiesparfunktionen?</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">Warum blinkt diese App nicht oder manchmal nicht?</string>
+    <string name="what_permissions_dose_this_app_require">Welche Berechtigungen benötigt diese App?</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">Wie vermeide ich es, diese App versehentlich zu schließen?</string>
+    <string name="off">Aus</string>
+    <string name="on_time">Ein-Zeit</string>
+    <string name="ms">ms</string>
+    <string name="delay">Verzögerung</string>
+    <string name="off_time">Aus-Zeit</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">Wie entferne ich diese Anwendung aus der Liste der eingeschränkten Energiesparfunktionen?</string>
+    <string name="english">Englisch</string>
+    <string name="chine">Chinesisch</string>
+    <string name="portugal">Portugiesisch</string>
+    <string name="spainish">Spanisch</string>
+    <string name="japanese">Japanisch</string>
+    <string name="german">Deutsch</string>
+    <string name="polish">Polnisch</string>
+    <string name="italian">Italienisch</string>
+    <string name="hindi">Hindi</string>
+    <string name="select_app">App auswählen</string>
+    <string name="sound_mode">Klangmodus</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">Blinklicht, wenn Ihr Telefon im Klangmodus ist</string>
+    <string name="silent_mode">Stiller Modus</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">Blinklicht, wenn Ihr Telefon im stillen Modus ist</string>
+    <string name="vibrate_mode">Vibrationsmodus</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">Blinklicht, wenn Ihr Telefon im Vibrationsmodus ist</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">Blitzlicht nicht aktivieren, wenn der Bildschirm eingeschaltet ist</string>
+    <string name="language">Sprache</string>
+    <string name="rate_app">App bewerten</string>
+    <string name="france">France</string>
+
+</resources>

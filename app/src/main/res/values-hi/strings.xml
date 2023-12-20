@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">कॉल पर फ़्लैश</string>
+    <string name="flash_phone_status">ऑफ़</string>
+    <string name="turn_on_to_active">सक्रिय करने के लिए ऑन करें:</string>
+    <string name="flash_on_sms">एसएमएस पर फ़्लैश</string>
+    <string name="flash_on_notification">सूचना पर फ़्लैश</string>
+    <string name="status">स्थिति:</string>
+    <string name="flashlight_speed">फ़्लैशलाइट की गति</string>
+    <string name="test">परीक्षण</string>
+    <string name="none">कोई नहीं</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">ऊर्जा बचाने की सुविधाओं की सीमित सूची से इस एप्लिकेशन को कैसे हटाएं?</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">इस एप्लिकेशन में फ्लैशिंग क्यों नहीं है या कभी-कभी नहीं हो रही है?</string>
+    <string name="what_permissions_dose_this_app_require">इस एप्लिकेशन को कौन-कौन सी अनुमतियाँ चाहिए?</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">इस एप्लिकेशन को अनजाने में बंद करने से कैसे बचें?</string>
+    <string name="off">बंद</string>
+    <string name="on_time">चालू</string>
+    <string name="ms">मिलीसेकंड</string>
+    <string name="delay">विलंब</string>
+    <string name="off_time">बंद समय</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">ऊर्जा बचाने की सुविधाओं की सीमित सूची से इस एप्लिकेशन को कैसे हटाएं?</string>
+    <string name="english">अंग्रेज़ी</string>
+    <string name="chine">चीनी</string>
+    <string name="portugal">पुर्तगाली</string>
+    <string name="spainish">स्पैनिश</string>
+    <string name="japanese">जापानी</string>
+    <string name="german">जर्मन</string>
+    <string name="polish">पोलिश</string>
+    <string name="italian">इतालवी</string>
+    <string name="hindi">हिंदी</string>
+    <string name="select_app">ऐप्लिकेशन चुनें</string>
+    <string name="sound_mode">ध्वनि मोड</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">आपके फोन में साउंड मोड में होने पर फ्लैश लाइट ब्लिंक करेगी</string>
+    <string name="silent_mode">शांत मोड</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">आपके फोन में शांत मोड में होने पर फ्लैश लाइट ब्लिंक करेगी</string>
+    <string name="vibrate_mode">वाइब्रेट मोड</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">आपके फोन में वाइब्रेट मोड में होने पर फ्लैश लाइट ब्लिंक करेगी</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">स्क्रीन चालू होने पर फ्लैश न चलाएं</string>
+    <string name="language">भाषा</string>
+    <string name="rate_app">एप्लिकेशन का मूल्यांकन करें</string>
+    <string name="france">France</string>
+
+</resources>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">Flash khi có cuộc gọi</string>
+    <string name="flash_phone_status">Tắt</string>
+    <string name="turn_on_to_active">Bật để kích hoạt:</string>
+    <string name="flash_on_sms">Flash khi có tin nhắn SMS</string>
+    <string name="flash_on_notification">Flash khi có thông báo</string>
+    <string name="status">Trạng thái:</string>
+    <string name="flashlight_speed">Tốc độ đèn pin</string>
+    <string name="test">Kiểm tra</string>
+    <string name="none">Không</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">Làm thế nào để loại bỏ ứng dụng này khỏi danh sách hạn chế các tính năng tiết kiệm năng lượng?</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">Tại sao ứng dụng này không sáng hoặc không sáng đôi khi?</string>
+    <string name="what_permissions_dose_this_app_require">Ứng dụng này yêu cầu những quyền gì?</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">Làm thế nào để tránh đóng ứng dụng này một cách ngẫu nhiên?</string>
+    <string name="off">Tắt</string>
+    <string name="on_time">Bật</string>
+    <string name="ms">ms</string>
+    <string name="delay">Trễ</string>
+    <string name="off_time">Tắt</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">Làm thế nào để loại bỏ ứng dụng này khỏi danh sách hạn chế các tính năng tiết kiệm năng lượng?</string>
+    <string name="english">Tiếng Anh</string>
+    <string name="chine">Tiếng Trung</string>
+    <string name="portugal">Tiếng Bồ Đào Nha</string>
+    <string name="spainish">Tiếng Tây Ban Nha</string>
+    <string name="japanese">Tiếng Nhật</string>
+    <string name="german">Tiếng Đức</string>
+    <string name="polish">Tiếng Ba Lan</string>
+    <string name="italian">Tiếng Ý</string>
+    <string name="hindi">Tiếng Hin-đi</string>
+    <string name="select_app">Chọn ứng dụng</string>
+    <string name="sound_mode">Chế độ âm thanh</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">Đèn flash nhấp nháy khi điện thoại của bạn ở chế độ âm thanh</string>
+    <string name="silent_mode">Chế độ im lặng</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">Đèn flash nhấp nháy khi điện thoại của bạn ở chế độ im lặng</string>
+    <string name="vibrate_mode">Chế độ rung</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">Đèn flash nhấp nháy khi điện thoại của bạn ở chế độ rung</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">Không bật đèn flash khi màn hình đang bật</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="rate_app">Đánh giá ứng dụng</string>
+    <string name="france">France</string>
+
+</resources>

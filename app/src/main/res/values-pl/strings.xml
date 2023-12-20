@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">Błyskawica podczas rozmowy</string>
+    <string name="flash_phone_status">Wyłączone</string>
+    <string name="turn_on_to_active">Włącz, aby aktywować:</string>
+    <string name="flash_on_sms">Błyskawica na SMS</string>
+    <string name="flash_on_notification">Błyskawica na powiadomienie</string>
+    <string name="status">Status:</string>
+    <string name="flashlight_speed">Szybkość latarki</string>
+    <string name="test">Test</string>
+    <string name="none">Brak</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">Jak usunąć tę aplikację z listy ograniczonych funkcji oszczędzania energii?</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">Dlaczego ta aplikacja nie miga lub czasami nie miga?</string>
+    <string name="what_permissions_dose_this_app_require">Jakie uprawnienia wymaga ta aplikacja?</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">Jak uniknąć przypadkowego zamknięcia tej aplikacji?</string>
+    <string name="off">Wyłączone</string>
+    <string name="on_time">Włączone</string>
+    <string name="ms">ms</string>
+    <string name="delay">Opóźnienie</string>
+    <string name="off_time">Wyłączone</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">Jak usunąć tę aplikację z listy ograniczonych funkcji oszczędzania energii?</string>
+    <string name="english">Angielski</string>
+    <string name="chine">Chiński</string>
+    <string name="portugal">Portugalski</string>
+    <string name="spainish">Hiszpański</string>
+    <string name="japanese">Japoński</string>
+    <string name="german">Niemiecki</string>
+    <string name="polish">Polski</string>
+    <string name="italian">Włoski</string>
+    <string name="hindi">Hinduski</string>
+    <string name="select_app">Wybierz aplikację</string>
+    <string name="sound_mode">Tryb dźwięku</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">Miganie latarki, gdy telefon jest w trybie dźwiękowym</string>
+    <string name="silent_mode">Tryb cichy</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">Miganie latarki, gdy telefon jest w trybie cichym</string>
+    <string name="vibrate_mode">Tryb wibracji</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">Miganie latarki, gdy telefon jest w trybie wibracji</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">Nie migaj latarką, gdy ekran jest włączony</string>
+    <string name="language">Język</string>
+    <string name="rate_app">Oceń aplikację</string>
+    <string name="france">France</string>
+</resources>

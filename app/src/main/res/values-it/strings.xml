@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">Lampeggio in chiamata</string>
+    <string name="flash_phone_status">Spento</string>
+    <string name="turn_on_to_active">Attiva per:</string>
+    <string name="flash_on_sms">Lampeggio su SMS</string>
+    <string name="flash_on_notification">Lampeggio sulla notifica</string>
+    <string name="status">Stato:</string>
+    <string name="flashlight_speed">Velocità della torcia</string>
+    <string name="test">Test</string>
+    <string name="none">Nessuno</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">Come rimuovere questa applicazione dalla lista delle funzionalità di risparmio energetico?</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">Perché questa app non lampeggia o lampeggia a volte?</string>
+    <string name="what_permissions_dose_this_app_require">Quali autorizzazioni richiede questa app?</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">Come evitare la chiusura accidentale di questa app?</string>
+    <string name="off">Spento</string>
+    <string name="on_time">Acceso</string>
+    <string name="ms">ms</string>
+    <string name="delay">Ritardo</string>
+    <string name="off_time">Spento</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">Come rimuovere questa applicazione dalla lista delle funzionalità di risparmio energetico?</string>
+    <string name="english">Inglese</string>
+    <string name="chine">Cinese</string>
+    <string name="portugal">Portoghese</string>
+    <string name="spainish">Spagnolo</string>
+    <string name="japanese">Giapponese</string>
+    <string name="german">Tedesco</string>
+    <string name="polish">Polacco</string>
+    <string name="italian">Italiano</string>
+    <string name="hindi">Hindi</string>
+    <string name="select_app">Seleziona app</string>
+    <string name="sound_mode">Modalità audio</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">Lampeggio della torcia quando il telefono è in modalità audio</string>
+    <string name="silent_mode">Modalità silenziosa</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">Lampeggio della torcia quando il telefono è in modalità silenziosa</string>
+    <string name="vibrate_mode">Modalità vibrazione</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">Lampeggio della torcia quando il telefono è in modalità vibrazione</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">Non lampeggiare la torcia quando lo schermo è acceso</string>
+    <string name="language">Lingua</string>
+    <string name="rate_app">Valuta l\'app</string>
+    <string name="france">France</string>
+
+</resources>

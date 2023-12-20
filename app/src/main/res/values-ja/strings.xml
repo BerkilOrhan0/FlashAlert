@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FlashAlert</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="flas_on_call">コール時のフラッシュ</string>
+    <string name="flash_phone_status">オフ</string>
+    <string name="turn_on_to_active">アクティブにするには：</string>
+    <string name="flash_on_sms">SMS時のフラッシュ</string>
+    <string name="flash_on_notification">通知時のフラッシュ</string>
+    <string name="status">ステータス：</string>
+    <string name="flashlight_speed">懐中電灯の速度</string>
+    <string name="test">テスト</string>
+    <string name="none">なし</string>
+    <string name="how_to_remove_this_application_from_the_restricted_list_of_power_saving_features_on">省電力機能の制限リストからこのアプリを削除する方法</string>
+    <string name="why_this_app_not_flashing_or_not_flashing_sometimes">なぜこのアプリが点滅しないか、または時折点滅しないのか？</string>
+    <string name="what_permissions_dose_this_app_require">このアプリが必要とする権限は何ですか？</string>
+    <string name="how_to_avoid_accidentally_closing_this_app">このアプリを誤って閉じない方法</string>
+    <string name="off">オフ</string>
+    <string name="on_time">オンタイム</string>
+    <string name="ms">ミリ秒</string>
+    <string name="delay">遅延</string>
+    <string name="off_time">オフタイム</string>
+    <string name="how_to_remove_this_application_from_the_resticted_list_of_power_saving_features_on">省電力機能の制限リストからこのアプリを削除する方法</string>
+    <string name="english">英語</string>
+    <string name="chine">中国語</string>
+    <string name="portugal">ポルトガル語</string>
+    <string name="spainish">スペイン語</string>
+    <string name="japanese">日本語</string>
+    <string name="german">ドイツ語</string>
+    <string name="polish">ポーランド語</string>
+    <string name="italian">イタリア語</string>
+    <string name="hindi">ヒンディー語</string>
+    <string name="select_app">アプリを選択</string>
+    <string name="sound_mode">サウンドモード</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_sound_mode">サウンドモード時に電話が点滅するフラッシュライト</string>
+    <string name="silent_mode">サイレントモード</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_silent_mode">サイレントモード時に電話が点滅するフラッシュライト</string>
+    <string name="vibrate_mode">バイブレーションモード</string>
+    <string name="flash_light_blinking_when_your_phone_is_in_vibrate_mode">バイブレーションモード時に電話が点滅するフラッシュライト</string>
+    <string name="do_not_flash_the_flash_while_the_screen_is_on">画面がオンのときにフラッシュを点滅させないでください</string>
+    <string name="language">言語</string>
+    <string name="rate_app">アプリを評価</string>
+    <string name="france">France</string>
+
+</resources>
